@@ -12,53 +12,53 @@
     }
   </style>
 </head>
-<body>
-    <div class="flex h-screen bg-zinc-50 max-h-screen">
-        <div id="sidebar" class="p-5 shadow-md w-64 z-10  transform translate-x-0 transition-transform duration-300 ease-in-out">
+<body class="bg-zinc-50">
+    <div class="flex h-screen max-h-screen">
+        <div id="sidebar" class="p-5 shadow-md w-64 z-10 transform -translate-x-full transition-transform duration-300 ease-in-out md:translate-x-0 h-screen fixed md:relative">
             <h1 class="text-2xl font-bold mb-7 text-center text-blue-950">Xionnary</h1>
             <ul class="space-y-3 text-sm items-center">
-                <li class="bg-violet-600 px-5 py-3 rounded-xl shadow-md text-white font-semibold"><i class="bi bi-house mr-2"></i> <a href="homePages.html">Home</a></li>
+                <li class="bg-violet-600 px-5 py-3 rounded-xl shadow-md text-white font-semibold"><i class="bi bi-house mr-2"></i> <a href="index.html">Home</a></li>
                 <li class="px-5 py-3 hover:text-violet-600 rounded text-gray-400 font-semibold"><i class="bi bi-info-circle mr-2"></i> <a href="about.html">About</a></li>
                 <li class="px-5 py-3 hover:text-violet-600 rounded text-gray-400 font-semibold"><i class="bi bi-people mr-2"></i><a href="data-siswa.html">Data Siswa</a></li>
                 <li class="px-5 py-3 hover:text-violet-600 rounded text-gray-400 font-semibold"> <i class="bi bi-envelope mr-2"></i> <a href="contact-us.html">Contact</a></li>
             </ul>
         </div>
-        <div id="content" class="bg-zinc-50 w-full max-h-screen">
-            <div class="title-top flex flex-row">
-                <h1 class="text-3xl font-semibold ml-10 mt-5">Dashboard</h1>
-                <h1 class="text-2xl ml-auto mt-5 mr-20">Name Dashboard</h1>
+        <div id="content" class="bg-zinc-50 w-full max-h-screen mt-5 md:mt-0">
+            <div class="title flex md:flex-row flex-col text-center justify-between px-10 py-5 mb-10 md:mb-10">
+                <h1 class="text-3xl font-semibold">Jurnalistik</h1>
+                <h2 class="text-2xl font-medium">Dashboard</h2>
             </div>
-            <div class="card-leader flex flex-col justify-center items-center h-[90vh]">
-                <h1 class="text-2xl mb-10 font-semibold bg-violet-600 text-white px-7 py-3 rounded-lg bg-gradient-to-r from-violet-500 to-blue-500 duration-300 hover:px-10 hover:scale-105">LeaderShip</h1>
-                <div class="card-container flex-row gap-4">
-                    <div class="card flex gap-4">
-                        <div id="card" class="max-w-xs mx-auto bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl shadow-lg overflow-hidden transform transition duration-700 hover:scale-105 translate-y-20 opacity-0 ease-in-out hover:duration-300">
+            <div class="card-leader flex flex-col justify-center items-center md:h-[75vh] h-[90vh]">
+                <h1 class="text-2xl -mb-5 md:mb-10 font-semibold bg-violet-600 text-white px-7 py-3 rounded-lg bg-gradient-to-r from-violet-500 to-blue-500 duration-300 hover:px-10 hover:scale-105">LeaderShip</h1>
+                <div class="card-container flex-row gap-4 md:mt-0 mt-10">
+                    <div class="card flex gap-4 flex-col md:flex-row gap-y-5 mb-10">
+                        <div id="card" class="min-w-56 max-w-56 mx-auto bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl shadow-lg overflow-hidden transform transition duration-700 hover:scale-105 translate-y-20 opacity-0 ease-in-out hover:duration-300">
                             <div class="relative">
                                 <img class="w-full h-48 object-cover opacity-90" src="https://via.placeholder.com/150" alt="Profile Image">
                                 <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-30"></div>
                                 <div class="absolute bottom-0 left-0 p-4">
-                                    <h2 class="text-white text-2xl font-bold drop-shadow-lg">Nama Lengkap</h2>
-                                    <p class="text-gray-200 text-sm drop-shadow-lg">Jabatan</p>
+                                    <h2 class="text-white text-2xl font-bold drop-shadow-lg">db_nama</h2>
+                                    <p class="text-gray-200 text-sm drop-shadow-lg">db_jabatan</p>
                                 </div>
                             </div>
                             
                             <div class="p-6 bg-white rounded-b-2xl">
-                                <p class="text-gray-700 text-center font-semibold">Role dalam Organisasi</p>
+                                <p class="text-gray-700 text-center font-semibold">db_role</p>
                                 <button class="mt-4 w-full bg-violet-500 hover:bg-violet-600 text-white py-2 rounded-lg font-medium transition duration-200">View Profile</button>
                             </div>
                         </div>                        
-                        <div id="card2" class="max-w-xs mx-auto bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl shadow-lg overflow-hidden transform transition duration-700 hover:scale-105 translate-y-20 opacity-0 ease-in-out delay-100 hover:duration-300">
+                        <div id="card2" class="min-w-56 max-w-56 mx-auto bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl shadow-lg overflow-hidden transform transition duration-700 hover:scale-105 translate-y-20 opacity-0 ease-in-out delay-100 hover:duration-300">
                             <div class="relative">
                                 <img class="w-full h-48 object-cover opacity-90" src="https://via.placeholder.com/150" alt="Profile Image">
                                 <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-30"></div>
                                 <div class="absolute bottom-0 left-0 p-4">
-                                    <h2 class="text-white text-2xl font-bold drop-shadow-lg">Nama Lengkap</h2>
-                                    <p class="text-gray-200 text-sm drop-shadow-lg">Jabatan</p>
+                                    <h2 class="text-white text-2xl font-bold drop-shadow-lg">db_nama</h2>
+                                    <p class="text-gray-200 text-sm drop-shadow-lg">db_jabatan</p>
                                 </div>
                             </div>
                             
                             <div class="p-6 bg-white rounded-b-2xl">
-                                <p class="text-gray-700 text-center font-semibold">Role dalam Organisasi</p>
+                                <p class="text-gray-700 text-center font-semibold">db_role</p>
                                 <button class="mt-4 w-full bg-violet-500 hover:bg-violet-600 text-white py-2 rounded-lg font-medium transition duration-200">View Profile</button>
                             </div>
                         </div>                        
