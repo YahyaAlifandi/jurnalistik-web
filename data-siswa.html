@@ -21,13 +21,13 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen w-full flex">
+<body class="bg-gray-100 min-h-screen w-full flex h-[95vh]">
     <div class="items-center py-3 px-5 fixed bg-white m-5 rounded-lg shadow-lg flex md:hidden">
         <button id="menu-toggle" class="text-blue-950 text-3xl">
             <i class="bi bi-list"></i>
         </button>
     </div>
-    <div id="sidebar" class="bg-zinc-50 p-5 shadow-md w-[20rem] z-10 transform -translate-x-full transition-transform duration-300 ease-in-out md:translate-x-0 h-screen min-h-full fixed md:relative">
+    <div id="sidebar" class="bg-zinc-50 p-5 shadow-md w-[16rem] md:w-[20rem] z-20 transform -translate-x-full transition-transform duration-300 ease-in-out md:translate-x-0 h-screen min-h-full fixed md:relative">
         <h1 class="text-2xl font-bold mb-7 text-center text-blue-950">Xionnary</h1>
         <ul class="space-y-3 text-sm items-center">
             <li class="px-5 py-3 hover:text-violet-600 rounded text-gray-400 font-semibold"><i class="bi bi-house mr-2"></i> <a href="index.html">Home</a></li>
@@ -36,15 +36,23 @@
             <li class="px-5 py-3 hover:text-violet-600 rounded text-gray-400 font-semibold"> <i class="bi bi-envelope mr-2"></i> <a href="contact-us.html">Contact</a></li>
         </ul>
     </div>
-    <div class="container-main flex flex-col">
-        <div class="search-input flex mt-24 md:mt-5 justify-center items-center sticky">
+    <div class="container-lg flex flex-col">
+        <!-- <div class="search-input flex mt-24 md:mt-5 justify-center items-center sticky">
             <div class="container flex justify-between items-center mx-10 w-[4rm] md:w-[40rem] bg-white shadow-sm pl-5 pr-1 py-3 rounded-md">
                 <input class="sc text-sm bg-transparent outline-none text-black w-full" type="search" name="" id="" placeholder="Input nama disini">
                 <button type="submit"><i class="bi bi-search bg-violet-600 text-white px-3 py-2 rounded-md "></i>
                 </button>
             </div>
+        </div> -->
+        <div class="search-input flex mt-24 md:mt-5 justify-center items-center sticky top-0 z-10">
+            <div class="container flex justify-between items-center mx-10 w-[4rm] md:w-[40rem] bg-white shadow-sm pl-5 pr-1 py-3 rounded-md">
+                <input class="sc text-sm bg-transparent outline-none text-black w-full" type="search" name="" id="" placeholder="Input nama disini">
+                <button type="submit">
+                    <i class="bi bi-search bg-violet-600 text-white px-3 py-2 rounded-md"></i>
+                </button>
+            </div>
         </div>
-        <div class="card justify-center items-center w-full flex flex-wrap max-h-[90vh] overflow-y-scroll-hidden">
+        <div class="card justify-center items-center w-full flex flex-wrap max-h-[90vh] overflow-y-scroll">
             <div class="container p-4 max-w-64">
                 <div class="bg-white rounded-lg shadow-md p-6 text-center">
                     <img class="w-20 h-20 rounded-full mx-auto mb-4" src="https://via.placeholder.com/80" alt="Student Photo">
@@ -216,5 +224,6 @@
             openSidebar();
         }
     });
+    
 </script>
 </html>
