@@ -10,16 +10,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body class="bg-gray-100 flex">
-    <div id="sidebar" class="p-5 shadow-md w-64 z-10 transform translate-x-0 transition-transform duration-300 ease-in-out h-screen">
+    <div class="flex items-center py-3 px-5 fixed bg-white m-5 rounded-lg shadow-lg z-10">
+        <button id="menu-toggle" class="text-blue-950 text-3xl">
+            <i class="bi bi-list"></i>
+        </button>
+    </div>
+    <div id="sidebar" class="bg-zinc-50 p-5 shadow-md w-64 z-10 transform -translate-x-full transition-transform duration-300 ease-in-out md:translate-x-0 h-screen fixed md:relative">
         <h1 class="text-2xl font-bold mb-7 text-center text-blue-950">Xionnary</h1>
         <ul class="space-y-3 text-sm items-center">
-            <li class="px-5 py-3 hover:text-violet-600 rounded text-gray-400 font-semibold"><i class="bi bi-house mr-2"></i> <a href="index.html">Home</a></li>
+            <li class="bg-violet-600 px-5 py-3 rounded-xl shadow-md text-white font-semibold"><i class="bi bi-house mr-2"></i> <a href="index.html">Home</a></li>
             <li class="px-5 py-3 hover:text-violet-600 rounded text-gray-400 font-semibold"><i class="bi bi-info-circle mr-2"></i> <a href="update-about.html">About</a></li>
             <li class="px-5 py-3 hover:text-violet-600 rounded text-gray-400 font-semibold"><i class="bi bi-people mr-2"></i><a href="data-siswa.html">Data Siswa</a></li>
-            <li class="bg-violet-600 px-5 py-3 rounded-xl shadow-md text-white font-semibold"> <i class="bi bi-envelope mr-2"></i><a href="contact-us.html">Contact</a></li>
+            <li class="px-5 py-3 hover:text-violet-600 rounded text-gray-400 font-semibold"> <i class="bi bi-envelope mr-2"></i> <a href="contact-us.html">Contact</a></li>
         </ul>
     </div>
-    <div class="container-card items-center justify-center flex w-full ">
+    <div class="container-card items-center justify-center flex w-full md:mt-0 mt-24 m-5 md:m-0">
         <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
             <h2 class="text-2xl font-bold text-purple-600 mb-4">Let's talk</h2>
             <p class="text-gray-600 mb-6">
@@ -47,4 +52,45 @@
     </div>
 
 </body>
+<script>
+            const card = document.getElementById('card');
+    const card2 = document.getElementById('card2');
+    window.onload = function() {
+        card.classList.add('translate-y-0');
+        card.classList.remove('translate-y-10');
+        card.classList.add('opacity-1');
+        card.classList.remove('opacity-0');
+
+        card2.classList.add('translate-y-0');
+        card2.classList.remove('translate-y-10');
+        card2.classList.add('opacity-1');
+        card2.classList.remove('opacity-0');
+    }
+    const menu_toggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    function openSidebar() {
+        sidebar.classList.add('translate-x-0');
+        sidebar.classList.remove('-translate-x-full');
+        document.addEventListener('click', closeSidebarOnOutsideClick);
+    };
+    function closeSidebar() {
+        sidebar.classList.add('-translate-x-full');
+        sidebar.classList.remove('translate-x-0');
+        document.addEventListener('click', closeSidebarOnOutsideClick);
+    }
+    function closeSidebarOnOutsideClick(event) {
+        if (!sidebar.contains(event.target) && !menu_toggle.contains(event.target)) {
+            closeSidebar();
+        }
+    }
+    menu_toggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+        if (sidebar.classList.contains(openSidebar)) {
+            closeSidebar();
+        }
+        else {
+            openSidebar();
+        }
+    });
+</script>
 </html>
