@@ -1,0 +1,5 @@
+db_jurnalistik =>
+tbl_kelas => id
+tbl_data_siswa => id
+		  nama
+		  
